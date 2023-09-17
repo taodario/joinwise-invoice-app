@@ -9,10 +9,20 @@ body {
   
   .invoice-form {
     background-color: #fff;
-    padding: 20px;
+    padding: 20px 40px; /* Increased right and left padding */
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
+  
+  .invoice-form input {
+    width: calc(100% - 16px); /* Adjusted width to account for padding */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+  }
+  
+  
   
   .invoice-form div {
     margin-bottom: 10px;
@@ -52,5 +62,28 @@ body {
   
   .item-row > div {
     flex: 1;
+  }
+  
+  .item-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .item-row > div {
+    flex: 1;
+    margin-right: 10px; /* Add some margin to the right of each div */
+  }
+  
+  .item-row > div:last-child {
+    margin-right: 0; /* Remove the margin from the last div to prevent extra spacing on the right */
+  }
+  
+  .item-row input {
+    width: 90%; /* Adjust the width as needed */
+  }
+  
+  button[onclick="addItemRow()"] {
+    margin-bottom: 20px; /* Adjust the margin as needed */
   }
   
