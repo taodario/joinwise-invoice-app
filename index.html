@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invoice Generator</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="invoice-form">
+  <div>
+    <label>BILL TO:</label>
+    <input type="text" id="billTo" name="billTo">
+  </div>
+  <div>
+    <label>Date:</label>
+    <input type="date" id="date" name="date">
+  </div>
+  <div>
+    <label>Invoice No.:</label>
+    <input type="text" id="invoiceNo" name="invoiceNo">
+  </div>
+  <div>
+    <label>Payment Terms:</label>
+    <input type="text" id="paymentTerms" name="paymentTerms">
+  </div>
+  <div>
+    <label>DESCRIPTION:</label>
+    <input type="text" id="description" name="description">
+  </div>
+  <div>
+    <label>QTY:</label>
+    <input type="number" id="qty" name="qty">
+  </div>
+  <div>
+    <label>UNIT PRICE:</label>
+    <input type="number" id="unitPrice" name="unitPrice">
+  </div>
+  <div>
+    <label>TOTAL:</label>
+    <input type="number" id="total" name="total" readonly>
+  </div>
+  <button onclick="calculateTotal()">Calculate Total</button>
+  <button onclick="generatePDF()">Generate PDF</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
