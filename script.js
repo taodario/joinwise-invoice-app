@@ -40,4 +40,25 @@ function calculateTotal() {
     }
   }
   
+  function addItemRow() {
+    const itemRow = document.createElement('div');
+    itemRow.classList.add('item-row');
+  
+    itemRow.innerHTML = `
+      <div>
+        <label>DESCRIPTION:</label>
+        <input type="text" name="description">
+      </div>
+      <div>
+        <label>QTY:</label>
+        <input type="number" name="qty">
+      </div>
+      <div>
+        <label>UNIT PRICE:</label>
+        <input type="number" name="unitPrice">
+      </div>
+    `;
+  
+    document.querySelector('.invoice-form').insertBefore(itemRow, document.querySelector('button'));
+  }
   
